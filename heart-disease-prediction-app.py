@@ -92,11 +92,12 @@ def main():
             st.write("You have less chance of heart disease")
             st.write('Tips for you 😊')
             st.write(random_tips())
-
+    st.sidebar.image('author_image.png', caption='Saswat Tulo',width=150)
     st.sidebar.markdown('## Author')
     st.sidebar.markdown('**Saswat Tulo**')
     st.sidebar.markdown('Email: saswattulo@gmail.com')
     st.sidebar.markdown('GitHub: github.com/saswattulo')
+    st.sidebar.markdown('LinkedIn: www.linkedin.com/in/saswattulo')
 if __name__ == "__main__":
     main()
 
