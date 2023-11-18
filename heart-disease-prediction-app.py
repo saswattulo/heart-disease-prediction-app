@@ -17,18 +17,19 @@ co = ['age', 'sex', 'cp', 'trtbps', 'chol', 'fbs', 'restecg', 'thalachh',
 cols = ['age', 'trtbps', 'chol', 'thalachh', 'oldpeak']  # continuous data
 cols2 = ['sex', 'cp', 'fbs', 'restecg', 'exng', 'slp', 'caa', 'thall']  # descrete datas
 def main():
-    age = st.number_input('Enter your age', min_value=1., max_value=120.,step=1.,format="%.2f")
+    age = st.slider('Enter your age', min_value=1, max_value=120,step=1)
+    age=float(age)
     sex = st.selectbox('Select your sex', ['Male ♂️', 'Female ♀️'])
     if(sex=='Male'):
         sex=float(1.0)
     else:
         sex=float(0.0)
-    cp = st.selectbox('Select your chest pain type',['typical angina','atypical angina','non anginal pain','asymptomatic'] )
-    if(cp=='typical angina'):
+    cp = st.selectbox('Select your chest pain type',['Typical angina','Atypical angina','Non anginal pain','asymptomatic'] )
+    if(cp=='Typical angina'):
         cp=float(0.0)
-    elif(cp=='atypical angina'):
+    elif(cp=='Atypical angina'):
         cp=float(1.0)
-    elif(cp=='non anginal pain'):
+    elif(cp=='Non Anginal pain'):
         cp=float(2.0)
     else:
         cp=float(3.0)
@@ -92,7 +93,10 @@ def main():
             st.write('Tips for you 😊')
             st.write(random_tips())
 
-
+    st.sidebar.markdown('## Author')
+    st.sidebar.markdown('**Saswat Tulo**')
+    st.sidebar.markdown('Email: saswattulo@gmail.com')
+    st.sidebar.markdown('GitHub: github.com/saswattulo')
 if __name__ == "__main__":
     main()
 
