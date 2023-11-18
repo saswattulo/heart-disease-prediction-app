@@ -1,4 +1,3 @@
-random
 pickle
 streamlit
 scikit-learn
